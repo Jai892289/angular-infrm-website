@@ -109,7 +109,7 @@
                       <li _ngcontent-kbp-c107="">The most important ingredient of successful website.</li>
                       <li _ngcontent-kbp-c107="">Sed ut perspiciatis unde omnis iste natus error sit.</li>
                       <li _ngcontent-kbp-c107="">Submit Your Orgnization.</li>
-                  </ul><a _ngcontent-kbp-c107="" href="javascript: void(0);" class="btn btn-custom margin-t-30">Learn
+                  </ul><a _ngcontent-kbp-c107="" href="#" class="btn btn-custom margin-t-30">Learn
                       More <i _ngcontent-kbp-c107="" class="mdi mdi-arrow-right"></i></a>
               </div>
           </div>
@@ -150,7 +150,7 @@
                       <p _ngcontent-kbp-c108="">Support: <b _ngcontent-kbp-c108="" class="text-custom">No</b></p>
                       <p _ngcontent-kbp-c108=""><b _ngcontent-kbp-c108="" class="text-custom">1</b> Domain</p>
                       <p _ngcontent-kbp-c108=""><b _ngcontent-kbp-c108="" class="text-custom">No</b> Hidden Fees</p>
-                  </div><a _ngcontent-kbp-c108="" href="javascript: void(0);" class="btn btn-custom margin-t-30">Join
+                  </div><a _ngcontent-kbp-c108="" href="#" class="btn btn-custom margin-t-30">Join
                       Now</a>
               </div>
           </div>
@@ -167,7 +167,7 @@
                       <p _ngcontent-kbp-c108="">Support: <b _ngcontent-kbp-c108="" class="text-custom">Yes</b></p>
                       <p _ngcontent-kbp-c108=""><b _ngcontent-kbp-c108="" class="text-custom">10</b> Domain</p>
                       <p _ngcontent-kbp-c108=""><b _ngcontent-kbp-c108="" class="text-custom">No</b> Hidden Fees</p>
-                  </div><a _ngcontent-kbp-c108="" href="javascript: void(0);" class="btn btn-custom margin-t-30">Join
+                  </div><a _ngcontent-kbp-c108="" href="#" class="btn btn-custom margin-t-30">Join
                       Now</a>
               </div>
           </div>
@@ -184,7 +184,7 @@
                       <p _ngcontent-kbp-c108="">Support: <b _ngcontent-kbp-c108="" class="text-custom">Yes</b></p>
                       <p _ngcontent-kbp-c108=""><b _ngcontent-kbp-c108="" class="text-custom">Unlimited</b> Domain</p>
                       <p _ngcontent-kbp-c108=""><b _ngcontent-kbp-c108="" class="text-custom">No</b> Hidden Fees</p>
-                  </div><a _ngcontent-kbp-c108="" href="javascript: void(0);" class="btn btn-custom margin-t-30">Join
+                  </div><a _ngcontent-kbp-c108="" href="#" class="btn btn-custom margin-t-30">Join
                       Now</a>
               </div>
           </div>
@@ -234,7 +234,7 @@
               </div>
           </div>
           <div _ngcontent-kbp-c109="" class="text-center mx-auto"><a _ngcontent-kbp-c109=""
-                  href="javascript: void(0);" class="btn btn-custom margin-t-50">Get Started <i _ngcontent-kbp-c109=""
+                  href="#" class="btn btn-custom margin-t-50">Get Started <i _ngcontent-kbp-c109=""
                       class="mdi mdi-arrow-right"></i></a></div>
       </div>
   </div>
@@ -392,7 +392,217 @@
                           class="text-muted d-block mt-2">9:00AM To 6:00PM</span></p>
               </div>
           </div>
-          <div _ngcontent-kbp-c111="" class="col-lg-8">
+
+          
+
+
+
+
+
+
+
+
+
+          <div class="col-12 col-lg-9 col-xl-7">
+            <div class="card shadow-2-strong card-registration" >
+              <div class="card-body p-4 p-md-5">
+            
+                <form [formGroup]="registrationForm" (ngSubmit)="submitForm(registrationForm.value)">
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <label class="form-label" for="firstName">First Name</label>
+                        <input formControlName="firstName" type="text" id="firstName"
+                          class="form-control form-control-lg" />
+                        <div [ngClass]="'alert'" *ngIf="
+                              submittedForm ||
+                              (firstName.invalid && firstName.dirty) ||
+                              firstName.touched
+                            ">
+
+                          <div [ngClass]="'alert'" *ngIf="firstName.errors?.['required']">
+                            Field is required.
+                          </div>
+                          <div [ngClass]="'alert'"
+                            *ngIf="firstName.errors?.['minlength']||firstName.errors?.['maxlength']||firstName.errors?.['pattern']">
+                            Please Enter Valid Format.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <label class="form-label" for="lastName">Last Name</label>
+
+                        <input formControlName="lastName" type="text" id="lastName"
+                          class="form-control form-control-lg" />
+                        <div [ngClass]="'alert'" *ngIf="
+                              submittedForm ||
+                              (lastName.invalid && lastName.dirty) ||
+                              lastName.touched
+                            ">
+                          <div [ngClass]="'alert'" *ngIf="lastName.errors?.['required']">
+                            Field is required.
+                          </div>
+                          <div [ngClass]="'alert'"
+                            *ngIf="lastName.errors?.['minlength']||lastName.errors?.['maxlength']||lastName.errors?.['pattern']">
+                            Please Enter Valid Format.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- <div class="row">
+                    <div class="col-md-6 mb-4 d-flex align-items-center">
+                      <div class="form-outline datepicker w-100">
+                        <label for="birthdayDate" class="form-label">Birthday</label>
+
+                        <input formControlName="birthdayDate" type="date" class="form-control form-control-lg"
+                          id="birthdayDate" />
+                        <div [ngClass]="'alert'" *ngIf="
+                              submittedForm ||
+                              (birthdayDate.invalid && birthdayDate.dirty) ||
+                              birthdayDate.touched
+                            ">
+                          <div [ngClass]="'alert'" *ngIf="birthdayDate.errors?.['required']">
+                            Field is required.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    
+                    <div class="col-md-6 mb-4">
+                      <h6 class="mb-2 pb-1">Gender</h6>
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="maleGender">Male</label>
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                          value="option2" formControlName="inlineRadioOptions" />
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="femaleGender">Female</label>
+
+                        <input formControlName="inlineRadioOptions" class="form-check-input" type="radio"
+                          name="inlineRadioOptions" id="femaleGender" value="option1" checked />
+                      </div>
+                      <div [ngClass]="'alert'" *ngIf="
+                            submittedForm ||
+                            (inlineRadioOptions.invalid &&
+                              inlineRadioOptions.dirty) ||
+                            inlineRadioOptions.touched
+                          ">
+                        <div [ngClass]="'alert'" *ngIf="inlineRadioOptions.errors?.['required']">
+                          Field is required.
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4 pb-2">
+                      <div class="form-outline">
+                        <label class="form-label" for="email">Email</label>
+
+                        <input formControlName="email" type="email" id="email" class="form-control form-control-lg" />
+                        <div [ngClass]="'alert'" *ngIf="
+                              submittedForm ||
+                              (email.invalid && email.dirty) ||
+                              email.touched
+                            ">
+                          <div [ngClass]="'alert'" *ngIf="email.errors?.['required']">
+                            Field is required.
+                          </div>
+                          <div [ngClass]="'alert'" *ngIf="email.errors?.['pattern']">
+                            Please Enter Valid Email.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4 pb-2">
+                      <div class="form-outline">
+                        <label class="form-label" for="phoneNumber">Phone Number</label>
+
+                        <input formControlName="phoneNumber" type="tel" id="phoneNumber"
+                          class="form-control form-control-lg" />
+
+                        <div [ngClass]="'alert'" *ngIf="
+                              submittedForm ||
+                              (phoneNumber.invalid && phoneNumber.dirty) ||
+                              phoneNumber.touched
+                            ">
+                          <div [ngClass]="'alert'" *ngIf="phoneNumber.errors?.['required']">
+                            Field is required.
+                          </div>
+                          <div [ngClass]="'alert'" *ngIf="phoneNumber.errors?.['pattern']">
+                            Please Enter Valid Phone Number.
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <label class="form-label select-label">Subject</label>
+
+                      <select formControlName="choose" class="select form-control-lg form-control form-select"
+                        placeholder="Choose option">
+                        <option disabled>Choose option</option>
+                        <option *ngFor="let obj of dates" value={{obj.id}}> {{obj.title}}</option>
+
+                      </select>
+                    </div>
+                    <div [ngClass]="'alert'" *ngIf="
+                          submittedForm ||
+                          (choose.invalid && choose.dirty) ||
+                          choose.touched
+                        ">
+                      <div [ngClass]="'alert'" *ngIf="choose.errors?.['required']">
+                        Field is required.
+                      </div>
+                    </div>
+                  </div>
+                  <BR />
+
+
+
+                 
+
+
+                  <div class="mt-4 pt-2">
+                    <input class="btn btn-primary btn-lg" (click)="onSubmit()"   type="submit" value="Save" [disabled]="!registrationForm.valid" />
+                  </div>
+
+<!-- <button (click)="showToasterSuccess()">rferw</button> -->
+
+
+                </form>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+          <!-- <div _ngcontent-kbp-c111="" class="col-lg-8">
               <div _ngcontent-kbp-c111="" class="custom-form mt-4 pt-4">
                   <div _ngcontent-kbp-c111="" id="message"></div>
                   <form _ngcontent-kbp-c111="" method="post" action="php/contact.php" name="contact-form"
@@ -432,7 +642,7 @@
                       </div>
                   </form>
               </div>
-          </div>
+          </div> -->
       </div>
   </div>
 </section>
@@ -447,12 +657,12 @@
               <h4 _ngcontent-kbp-c112="">DORSIN</h4>
               <div _ngcontent-kbp-c112="" class="text-muted margin-t-20">
                   <ul _ngcontent-kbp-c112="" class="list-unstyled footer-list">
-                      <li _ngcontent-kbp-c112=""><a _ngcontent-kbp-c112="" href="javascript: void(0);">Home</a></li>
-                      <li _ngcontent-kbp-c112=""><a _ngcontent-kbp-c112="" href="javascript: void(0);">About us</a>
+                      <li _ngcontent-kbp-c112=""><a _ngcontent-kbp-c112="" href="#">Home</a></li>
+                      <li _ngcontent-kbp-c112=""><a _ngcontent-kbp-c112="" href="#">About us</a>
                       </li>
-                      <li _ngcontent-kbp-c112=""><a _ngcontent-kbp-c112="" href="javascript: void(0);">Careers</a>
+                      <li _ngcontent-kbp-c112=""><a _ngcontent-kbp-c112="" href="#">Careers</a>
                       </li>
-                      <li _ngcontent-kbp-c112=""><a _ngcontent-kbp-c112="" href="javascript: void(0);">Contact us</a>
+                      <li _ngcontent-kbp-c112=""><a _ngcontent-kbp-c112="" href="#">Contact us</a>
                       </li>
                   </ul>
               </div>
@@ -461,12 +671,12 @@
               <h4 _ngcontent-kbp-c112="">Information</h4>
               <div _ngcontent-kbp-c112="" class="text-muted margin-t-20">
                   <ul _ngcontent-kbp-c112="" class="list-unstyled footer-list">
-                      <li _ngcontent-kbp-c112=""><a _ngcontent-kbp-c112="" href="javascript: void(0);">Terms &amp;
+                      <li _ngcontent-kbp-c112=""><a _ngcontent-kbp-c112="" href="#">Terms &amp;
                               Condition</a></li>
-                      <li _ngcontent-kbp-c112=""><a _ngcontent-kbp-c112="" href="javascript: void(0);">About us</a>
+                      <li _ngcontent-kbp-c112=""><a _ngcontent-kbp-c112="" href="#">About us</a>
                       </li>
-                      <li _ngcontent-kbp-c112=""><a _ngcontent-kbp-c112="" href="javascript: void(0);">Jobs</a></li>
-                      <li _ngcontent-kbp-c112=""><a _ngcontent-kbp-c112="" href="javascript: void(0);">Bookmarks</a>
+                      <li _ngcontent-kbp-c112=""><a _ngcontent-kbp-c112="" href="#">Jobs</a></li>
+                      <li _ngcontent-kbp-c112=""><a _ngcontent-kbp-c112="" href="#">Bookmarks</a>
                       </li>
                   </ul>
               </div>
@@ -488,7 +698,7 @@
                       importance of having web copy before the design starts.</p>
               </div>
               <form _ngcontent-kbp-c112="" class="form subscribe"><input _ngcontent-kbp-c112="" placeholder="Email"
-                      required="" class="form-control"><a _ngcontent-kbp-c112="" href="javascript: void(0);"
+                      required="" class="form-control"><a _ngcontent-kbp-c112="" href="#"
                       class="submit"><i _ngcontent-kbp-c112="" class="pe-7s-paper-plane"></i></a></form>
           </div>
       </div>

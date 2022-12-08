@@ -1,0 +1,30 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "firstName": "JAIDEEP",
+      "lastName": "GUPTA",
+      "birthdayDate": "2022-12-04",
+      "email": "jgupta324@gmail.com",
+      "phoneNumber": "0163354733",
+      "inlineRadioOptions": "option2",
+      "choose": "2",
+      "file": "",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
