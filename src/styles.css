@@ -10,7 +10,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     /* background-color: aqua; */
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 500px;
     width: 100%;
 
 }
@@ -186,7 +186,7 @@ input#submit, a.btn.btn-custom.margin-t-30, a.btn.btn-custom.margin-t-50, a.btn.
     width: 100% !important;
 } */
 h1.home-title {
-    margin-top:20%;
+    margin-top:10%;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -282,4 +282,11 @@ h5.text-center.text-uppercase.padding-t-15 {
 }
 .col-lg-8.offset-lg-2 {
     margin: 30px 0px;
+}
+.mb-4 {
+    margin-bottom: 1rem!important;
+}
+
+.btn-custom:hover{
+    background: #512DA8;
 }

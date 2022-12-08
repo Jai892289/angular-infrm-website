@@ -24,9 +24,9 @@ export class AppComponent {
       Validators.maxLength(100),
       Validators.pattern('^[a-zA-Z ]*$'),
     ]),
-    birthdayDate: new FormControl(null, [
-      Validators.required,
-    ]),
+    // birthdayDate: new FormControl(null, [
+    //   Validators.required,
+    // ]),
     email: new FormControl(null, [
       Validators.required,
       Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"),
@@ -35,9 +35,9 @@ export class AppComponent {
       Validators.required,
       Validators.pattern("[0-9]{10}"),
     ]),
-    inlineRadioOptions: new FormControl(null, [
-      Validators.required,
-    ]),
+    // inlineRadioOptions: new FormControl(null, [
+    //   Validators.required,
+    // ]),
     choose: new FormControl(null, [
       Validators.required,
     ]),
@@ -83,18 +83,18 @@ export class AppComponent {
   get lastName() {
     return this.registrationForm.get('lastName') as FormControl;
   }
-  get birthdayDate() {
-    return this.registrationForm.get('birthdayDate') as FormControl;
-  }
+  // get birthdayDate() {
+  //   return this.registrationForm.get('birthdayDate') as FormControl;
+  // }
   get email() {
     return this.registrationForm.get('email') as FormControl;
   }
   get phoneNumber() {
     return this.registrationForm.get('phoneNumber') as FormControl;
   }
-  get inlineRadioOptions() {
-    return this.registrationForm.get('inlineRadioOptions') as FormControl;
-  }
+  // get inlineRadioOptions() {
+  //   return this.registrationForm.get('inlineRadioOptions') as FormControl;
+  // }
   get choose() {
     return this.registrationForm.get('choose') as FormControl;
   }
@@ -140,9 +140,9 @@ export class AppComponent {
       this.data = {
         firstName: this.registrationForm.controls['firstName'].value,
         lastName: this.registrationForm.controls['lastName'].value,
-        birthdayDate: this.registrationForm.controls['birthdayDate'].value,
+        // birthdayDate: this.registrationForm.controls['birthdayDate'].value,
         email: this.registrationForm.controls['email'].value,
-        inlineRadioOptions: this.registrationForm.controls['inlineRadioOptions'].value,
+        // inlineRadioOptions: this.registrationForm.controls['inlineRadioOptions'].value,
         phoneNumber: this.registrationForm.controls['phoneNumber'].value,
         choose: this.registrationForm.controls['choose'].value,
         // fileUpload: this.registrationForm.controls['fileUpload'].value,
