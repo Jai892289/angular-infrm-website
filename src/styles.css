@@ -326,7 +326,7 @@ h4.padding-t-15 {
 
 h3, h4, h5, h2, h1 {
     font-family: system-ui !important;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .row.margin-t-50 {
@@ -344,4 +344,8 @@ h5.mt-4.text-muted {
     background: #FB3E3E;
     width: 200px;
     padding: 8px;
+    color: white !important;
+}
+span.h5 {
+    font-weight: 700;
 }
