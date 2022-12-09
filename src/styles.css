@@ -349,3 +349,30 @@ h5.mt-4.text-muted {
 span.h5 {
     font-weight: 700;
 }
+
+li.nav-item.active  a{
+    color: white !important;
+    margin: 0px 5px;
+}
+
+li.nav-item a{
+    color: white !important;
+
+}
+
+
+div#navbarSupportedContent {
+    position: absolute;
+    margin-right: 30px;
+    right: 0px;
+    /* top: 50px; */
+    right: 0px;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+    padding: 0px 20px;
+    }
+
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+        background-color: #711e72 !important;
+    }
