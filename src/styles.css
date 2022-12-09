@@ -328,3 +328,20 @@ h3, h4, h5, h2, h1 {
     font-family: system-ui !important;
     font-weight: 700;
 }
+
+.row.margin-t-50 {
+    margin-top: 20px !important;
+}
+
+label.form-label{
+    color: black !important;
+    font-family: system-ui !important;
+    letter-spacing: 0.5px;
+}
+
+h5.mt-4.text-muted {
+    margin-top: 20px !important;
+    background: #FB3E3E;
+    width: 200px;
+    padding: 8px;
+}
