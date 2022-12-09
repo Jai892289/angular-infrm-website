@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder, FormGroupDirective } from '@angular/forms';
 import { NgForm } from '@angular/forms';
 import { StudentsService } from './students.service';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faBell } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -57,7 +59,8 @@ export class AppComponent {
   token: string | undefined;
   file: File | undefined;
   isNextDisabled = true
-
+  faCoffee = faCoffee;
+  faBell = faBell;
   //////////captcha ///////
   captchaStatus: any = null;
   captchaConfig: any = {
@@ -105,7 +108,6 @@ export class AppComponent {
     this.user.getcall().subscribe((data) => {
       this.getcall = data;
 
-      console.log(data)
     });
 
     this.user.Users().subscribe(Date => {
@@ -125,8 +127,17 @@ export class AppComponent {
 
   ////////////captcha ////////////
 
-  ngOnInit(): void { }
 
+  ///////////////spinner ///////
+  loader = true;
+
+  ngOnInit(): void { 
+      //Loader variable set false after page load
+      setTimeout(()=>{                           
+        this.loader = false;
+    }, 2000);
+  }
+//////////////////////////
   /////////////////////////////////////////////////
 
 
@@ -168,6 +179,5 @@ export class AppComponent {
     
   }
 
-  
-
+ 
 }

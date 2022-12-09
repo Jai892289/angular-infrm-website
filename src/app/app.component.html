@@ -1,3 +1,9 @@
+<div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status" *ngIf="loader">
+  <span class="visually-hidden">Loading...</span>
+</div>
+ 
+<div class="spinner-set" *ngIf="!loader">
+
  <section id="home" data-image-src="images/bg-home.jpg" class="section bg-home home-half">
   <div class="bg-overlay"></div>
   <div class="display-table">
@@ -38,8 +44,9 @@
       </div>
       <div _ngcontent-uwf-c106="" class="row margin-t-30">
           <div _ngcontent-uwf-c106="" class="col-lg-4 margin-t-20">
-              <div _ngcontent-uwf-c106="" class="services-box text-center hover-effect"><i _ngcontent-uwf-c106=""
-                      class="pe-7s-diamond text-custom"></i>
+              <div _ngcontent-uwf-c106="" class="services-box text-center hover-effect">
+                <!-- <i _ngcontent-uwf-c106="" class="pe-7s-diamond text-custom"></i> -->
+                <fa-icon [icon]="faCoffee"></fa-icon>
 
                   <h4 _ngcontent-uwf-c106="" class="padding-t-15">Digital Design</h4>
                   <p _ngcontent-uwf-c106="" class="padding-t-15 text-muted">Some quick example text to build on the
@@ -47,16 +54,18 @@
               </div>
           </div>
           <div _ngcontent-uwf-c106="" class="col-lg-4 margin-t-20">
-              <div _ngcontent-uwf-c106="" class="services-box text-center hover-effect"><i _ngcontent-uwf-c106=""
-                      class="pe-7s-display2 text-custom"></i>
+              <div _ngcontent-uwf-c106="" class="services-box text-center hover-effect">
+                <fa-icon [icon]="faCoffee"></fa-icon>
+
                   <h4 _ngcontent-uwf-c106="" class="padding-t-15">Unlimited Colors</h4>
                   <p _ngcontent-uwf-c106="" class="padding-t-15 text-muted">Credibly brand standards compliant users
                       without extensible services. Anibh euismod tincidunt ut laoreet.</p>
               </div>
           </div>
           <div _ngcontent-uwf-c106="" class="col-lg-4 margin-t-20">
-              <div _ngcontent-uwf-c106="" class="services-box text-center hover-effect"><i _ngcontent-uwf-c106=""
-                      class="pe-7s-piggy text-custom"></i>
+              <div _ngcontent-uwf-c106="" class="services-box text-center hover-effect">           
+                     <fa-icon [icon]="faCoffee"></fa-icon>
+
                   <h4 _ngcontent-uwf-c106="" class="padding-t-15">Strategy Solutions</h4>
                   <p _ngcontent-uwf-c106="" class="padding-t-15 text-muted">Separated they live in Bookmarksgrove
                       right at the coast of the Semantics, a large language ocean necessary regelialia.</p>
@@ -65,24 +74,27 @@
       </div>
       <div _ngcontent-uwf-c106="" class="row margin-t-30">
           <div _ngcontent-uwf-c106="" class="col-lg-4 margin-t-20">
-              <div _ngcontent-uwf-c106="" class="services-box text-center hover-effect"><i _ngcontent-uwf-c106=""
-                      class="pe-7s-science text-custom"></i>
+              <div _ngcontent-uwf-c106="" class="services-box text-center hover-effect">               
+                 <fa-icon [icon]="faCoffee"></fa-icon>
+
                   <h4 _ngcontent-uwf-c106="" class="padding-t-15">Awesome Support</h4>
                   <p _ngcontent-uwf-c106="" class="padding-t-15 text-muted">It is a paradisematic country, in which
                       roasted parts of sentences fly into your mouth leave for the far World.</p>
               </div>
           </div>
           <div _ngcontent-uwf-c106="" class="col-lg-4 margin-t-20">
-              <div _ngcontent-uwf-c106="" class="services-box text-center hover-effect"><i _ngcontent-uwf-c106=""
-                      class="pe-7s-news-paper text-custom"></i>
+              <div _ngcontent-uwf-c106="" class="services-box text-center hover-effect">           
+                     <fa-icon [icon]="faCoffee"></fa-icon>
+
                   <h4 _ngcontent-uwf-c106="" class="padding-t-15">Truly Multipurpose</h4>
                   <p _ngcontent-uwf-c106="" class="padding-t-15 text-muted">Even the all-powerful Pointing has no
                       control about the blind texts it is an almost unorthographic.</p>
               </div>
           </div>
           <div _ngcontent-uwf-c106="" class="col-lg-4 margin-t-20">
-              <div _ngcontent-uwf-c106="" class="services-box text-center hover-effect"><i _ngcontent-uwf-c106=""
-                      class="pe-7s-plane text-custom"></i>
+              <div _ngcontent-uwf-c106="" class="services-box text-center hover-effect">           
+                     <fa-icon [icon]="faCoffee"></fa-icon>
+
                   <h4 _ngcontent-uwf-c106="" class="padding-t-15">Easy to customize</h4>
                   <p _ngcontent-uwf-c106="" class="padding-t-15 text-muted">Question Marks and devious Semikoli, but
                       the Little Blind Text didn’t listen. She packed her seven versalia.</p>
@@ -206,29 +218,33 @@
           </div>
       </div>
       <div _ngcontent-kbp-c109="" class="row">
-          <div _ngcontent-kbp-c109="" class="col-lg-6 text-center process-left-icon-1"><i _ngcontent-kbp-c109=""
-                  class="pe-7s-angle-right"></i></div>
+          <div _ngcontent-kbp-c109="" class="col-lg-6 text-center process-left-icon-1">         
+                 
+          </div>
           <div _ngcontent-kbp-c109="" class="col-lg-6 text-center process-left-icon-2"><i _ngcontent-kbp-c109=""
                   class="pe-7s-angle-right"></i></div>
       </div>
       <div _ngcontent-kbp-c109="" class="row margin-t-50">
           <div _ngcontent-kbp-c109="" class="col-lg-4 plan-line">
-              <div _ngcontent-kbp-c109="" class="text-center process-box"><i _ngcontent-kbp-c109=""
-                      class="pe-7s-pen text-custom"></i>
+              <div _ngcontent-kbp-c109="" class="text-center process-box">            
+                    <fa-icon [icon]="faCoffee"></fa-icon>
+
                   <h4 _ngcontent-kbp-c109="" class="padding-t-15">Tell us what you need</h4>
                   <p _ngcontent-kbp-c109="" class="text-muted">The Big Oxmox advised her not to do so.</p>
               </div>
           </div>
           <div _ngcontent-kbp-c109="" class="col-lg-4 plan-line">
-              <div _ngcontent-kbp-c109="" class="text-center process-box"><i _ngcontent-kbp-c109=""
-                      class="pe-7s-id text-custom"></i>
+              <div _ngcontent-kbp-c109="" class="text-center process-box">
+                <fa-icon [icon]="faCoffee"></fa-icon>
+
                   <h4 _ngcontent-kbp-c109="" class="padding-t-15">Get free quotes</h4>
                   <p _ngcontent-kbp-c109="" class="text-muted">Little Blind Text didn’t listen.</p>
               </div>
           </div>
           <div _ngcontent-kbp-c109="" class="col-lg-4">
-              <div _ngcontent-kbp-c109="" class="text-center process-box"><i _ngcontent-kbp-c109=""
-                      class="pe-7s-target text-custom"></i>
+              <div _ngcontent-kbp-c109="" class="text-center process-box">
+                <fa-icon [icon]="faCoffee"></fa-icon>
+
                   <h4 _ngcontent-kbp-c109="" class="padding-t-15">Deliver high quality product</h4>
                   <p _ngcontent-kbp-c109="" class="text-muted">When she reached the first hills.</p>
               </div>
@@ -720,4 +736,4 @@
           </div>
       </div>
   </div>
-</div>
+</div></div>

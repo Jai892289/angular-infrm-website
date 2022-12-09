@@ -290,3 +290,41 @@ h5.text-center.text-uppercase.padding-t-15 {
 .btn-custom:hover{
     background: #512DA8;
 }
+
+.spinner-grow.text-primary{
+    position: fixed;
+  left: 0px;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+ z-index: 9999999999;
+  overflow: hidden;
+  /* background: #fff; */
+  left: 50%;
+  margin-left: -4em;
+}
+
+fa-icon.ng-fa-icon {
+    /* box-shadow: 10px 5px 5px black; */
+    box-shadow: 2px -2px 5px 0px rgb(0 0 0 / 75%);
+    padding: 10px;
+    border-radius: 50%;
+    /* margin-bottom: 20px !important; */
+}
+
+h4.padding-t-15 {
+    margin-top: 30px;
+}
+
+
+.text-muted {
+    --bs-text-opacity: 1;
+    color: black !important;
+    font-family: system-ui !important;
+    letter-spacing: 0.5px;
+}
+
+h3, h4, h5, h2, h1 {
+    font-family: system-ui !important;
+    font-weight: 700;
+}
